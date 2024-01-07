@@ -1,5 +1,11 @@
 package main
 
-func Hello() string {
-	return "Hello, World!"
+import "fmt"
+
+func Hello(name string) string {
+	if name == "" {
+		name = "World"
+	}
+
+	return fmt.Sprintf("Hello, %s", name)
 }
